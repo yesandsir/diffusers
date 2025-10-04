@@ -934,6 +934,8 @@ def main():
                     revision=args.revision,
                     variant=args.variant,
                     torch_dtype=weight_dtype,
+                    safety_checker=None,
+                    device_map=None,
                 )
                 images = log_validation(pipeline, args, accelerator, epoch)
 
